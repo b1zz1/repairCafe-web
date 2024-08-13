@@ -1,6 +1,6 @@
-const Stack = ({ children }) => {
+const Stack = ({ children, className }) => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className={`flex flex-col justify-center items-center ${className}`}>
             {children}
         </div>
     )

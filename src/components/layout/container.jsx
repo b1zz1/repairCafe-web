@@ -1,4 +1,4 @@
-const Container = ({ children }) => {
+const Container = ({ children, className }) => {
     return (
         <main className="flex flex-col min-h-screen justify-center items-center bg-purple.1 text-purple.6">
             {children}
