@@ -1,3 +1,5 @@
+// http://localhost:3000/user/sign-up
+
 "use client"
 
 import { useState } from "react"
@@ -14,7 +16,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/form"
-import { Button } from "@/components/ui/button/button"
+import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input/input"
 import userSchema from "@/schemas/userSchema";
 import Stack from "@/components/layout/stackCafe";

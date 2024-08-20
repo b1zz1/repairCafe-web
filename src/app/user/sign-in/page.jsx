@@ -1,5 +1,5 @@
 import { Input } from '@/components/ui/input/input'
-import { Button } from '@/components/ui/button/button'
+import { Button } from '@/components/ui/button'
 import Stack from '@/components/layout/stackCafe'
 import IconCafe from '@/components/ui/iconCafe'
 import WaveCafe from '@/components/ui/waveCafe'

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+    @apply leading-none;
+    @apply select-none;
+  }
+  h2 {
+    @apply text-3xl;
+    @apply leading-none;
+
+  }
+  h3 {
+    @apply text-xl;
+    @apply leading-none;
+  }
+  /* ... */
+}
