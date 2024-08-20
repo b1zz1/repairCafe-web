@@ -1,18 +1,44 @@
-import React from "react";
+import React from 'react'
 
-const IconCafe = ({ Icon, size="md", background=false, color }) => {
-  const sizeClasses = {
-    sm: "1rem",
-    md: "2rem",
-    lg: "5rem",
-  }
+import { cn } from '@/lib/utils'
 
-  return (
-      <>
-        {background && <Icon size={`${sizeClasses[size]}`} className={"bg-purple.6"}/>}
-        {!background && <Icon size={`${sizeClasses[size]}`} color={color} />}
-      </>
-  )
+const IconCafe = ({
+    Icon,
+    size = 'sm',
+    background = false,
+    color,
+    error = false,
+    className
+}) => {
+    const sizeClasses = {
+        xs: '1rem',
+        sm: '1.25rem',
+        md: '1.5rem',
+        lg: '2rem',
+        xl: '5rem',
+        fit: 'fit'
+    }
+
+    const colorClasses = {
+        white: 'text-white.2',
+        purple: 'text-purple.5/70',
+    }
+
+    return (
+        <>
+            {background && (
+                <Icon size={`${sizeClasses[size]}`} className={`h-fit w-fit p-2 rounded-md bg-purple.6 ${colorClasses[color]} ${className}`} />
+            )}
+            {!background && (
+                <Icon
+                    size={`${sizeClasses[size]}`}
+                    className={cn(`${colorClasses[color]} ${className}`, {
+                        'text-error.1': error,
+                    })}
+                />
+            )}
+        </>
+    )
 }
 
 export default IconCafe
